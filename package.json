@@ -7,8 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ratnasambhav@gmail.com",
-  "license": "ISC",
-  "workspaces": [
-    "packages/design-system"
-  ]
+  "license": "MIT",
+  "workspaces": ["packages/design-system"]
 }
