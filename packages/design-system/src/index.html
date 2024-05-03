@@ -1,14 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html dir="ltr" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
-
+    <title>RDS</title>
     <script type="module" src="/build/design-system.esm.js"></script>
     <script nomodule src="/build/design-system.js"></script>
+    <link rel="stylesheet" href="/build/design-system.css" />
+    <style>
+      body {
+        padding: 1rem;
+      }
+      h1 {
+        font-weight: 800;
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+      h2 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+      section {
+        margin: 2rem 0;
+      }
+      section div {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <rds-button>RDS Button</rds-button>
+    <h1>Design System</h1>
+    <section>
+      <h2>Buttons</h2>
+      <div>
+        <rds-button variant="primary">Button</rds-button>
+        <rds-button variant="secondary">Button</rds-button>
+        <rds-button variant="ghost">Button</rds-button>
+      </div>
+    </section>
   </body>
+  <script>
+    document.querySelectorAll('rds-button').forEach(rdsButton => rdsButton.addEventListener('clicked', event => console.log('==> Clicked:', event)));
+  </script>
 </html>

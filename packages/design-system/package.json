@@ -27,10 +27,7 @@
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
   },
-  "files": [
-    "dist/",
-    "loader/"
-  ],
+  "files": ["dist/", "loader/"],
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
@@ -42,13 +39,10 @@
     "@stencil/core": "^4.7.0",
     "@types/jest": "^29.5.6",
     "@types/node": "^16.18.11",
-    "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.0",
     "jest": "^29.7.0",
     "jest-cli": "^29.7.0",
     "puppeteer": "^21.9.0",
-    "stencil-tailwind-plugin": "^1.8.0",
-    "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
   },
   "license": "MIT"

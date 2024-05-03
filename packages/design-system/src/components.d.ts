@@ -7,10 +7,29 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface RdsButton {
+        "disabled": boolean;
+        "loading": boolean;
+        "rounded": 'none' | 'sm' | 'md' | 'lg' | 'full';
+        "variant": 'primary' | 'secondary' | 'ghost';
     }
 }
+export interface RdsButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLRdsButtonElement;
+}
 declare global {
+    interface HTMLRdsButtonElementEventMap {
+        "clicked": any;
+    }
     interface HTMLRdsButtonElement extends Components.RdsButton, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLRdsButtonElementEventMap>(type: K, listener: (this: HTMLRdsButtonElement, ev: RdsButtonCustomEvent<HTMLRdsButtonElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLRdsButtonElementEventMap>(type: K, listener: (this: HTMLRdsButtonElement, ev: RdsButtonCustomEvent<HTMLRdsButtonElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLRdsButtonElement: {
         prototype: HTMLRdsButtonElement;
@@ -22,6 +41,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface RdsButton {
+        "disabled"?: boolean;
+        "loading"?: boolean;
+        "onClicked"?: (event: RdsButtonCustomEvent<any>) => void;
+        "rounded"?: 'none' | 'sm' | 'md' | 'lg' | 'full';
+        "variant"?: 'primary' | 'secondary' | 'ghost';
     }
     interface IntrinsicElements {
         "rds-button": RdsButton;
