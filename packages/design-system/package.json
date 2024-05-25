@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "description": "Design system",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/design-system.umd.cjs",
   "module": "./dist/design-system.js",
   "exports": {
@@ -31,7 +33,14 @@
     "vite": "^5.2.0",
     "vue-tsc": "^2.0.6"
   },
-  "keywords": ["design system", "vue"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ratnasambhav/ui.git"
+  },
+  "keywords": [
+    "design system",
+    "vue"
+  ],
   "author": "ratnasambhav@gmail.com",
   "license": "ISC"
 }

@@ -32,6 +32,10 @@
     "vite": "^5.2.8",
     "vue-tsc": "^2.0.11"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ratnasambhav/ui.git"
+  },
   "keywords": ["Website", "Vue"],
   "author": "ratnasambhav@gmail.com",
   "license": "ISC"
