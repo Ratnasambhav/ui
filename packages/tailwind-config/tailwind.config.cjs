@@ -1,7 +1,13 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ["Atkinson Hyperlegible", ...defaultTheme.fontFamily.sans],
+        'serif': ['Editorial New', ...defaultTheme.fontFamily.serif],
+      },
       colors: {
         "background": "var(--background)",
 

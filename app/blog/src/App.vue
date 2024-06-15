@@ -10,7 +10,7 @@ import Nav from './components/Nav.vue';
             <Nav></Nav>
         </header>
         <main>
-            <RouterView></RouterView>
+            <RouterView/>
         </main>
         <footer></footer>
     </div>

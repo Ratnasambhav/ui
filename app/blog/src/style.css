@@ -1,4 +1,5 @@
 @import url('@ui/ui-lib/dist/style.css');
+@import url('@ui/tailwind-config/fonts.css');
 @import url('@ui/tailwind-config/colors.css');
 
 @tailwind base;
@@ -7,6 +8,6 @@
 
 @layer base {
     body {
-        @apply bg-background bg-gradient-to-b from-accent-4 to-transparent text-gray-12;
+        @apply bg-background bg-gradient-to-b from-accent-4 to-transparent font-sans text-gray-12;
     }
 }
