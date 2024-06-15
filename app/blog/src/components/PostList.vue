@@ -1,7 +1,44 @@
+<script setup lang="ts">
+import { Link, RightArrowIcon } from "@ui/ui-lib";
+
+import { postList } from '../data';
+
+/**
+* Calculate the number of blog posts for a given year.
+* @param {number} year - Year of the post
+*/
+const numPostInYear = (year: number): number => postList.reduce((count, post) => post.year === year ? count + 1 : count, 0)
+
+/**
+* Returns true if the given index is the same as the first post in the give year
+* @param year Year of the post
+* @param index Index of the post
+*/
+const shouldRenderYear = (year: number, index: number): boolean => postList.findIndex(post => post.year === year) === index
+</script>
+
 <template>
     <table>
         <tbody>
-            <tr></tr>
+            <tr v-for="(post, index) in postList" class="border-t border-gray-4" :key="`${post.date}/${post.year}`">
+                <td v-if="shouldRenderYear(post.year, index)" :rowspan="numPostInYear(post.year)"
+                    class="py-2 pr-10 text-gray-10 align-baseline">
+                    {{ post.year }}
+                </td>
+                <td class="py-2">
+                    <RouterLink :to="post.link">
+                        <Link>
+                        <template #leftContent>
+                            <RightArrowIcon />
+                        </template>
+                        {{ post.title }}
+                        </Link>
+                    </RouterLink>
+                </td>
+                <td class="py-2 pl-10 text-gray-10">
+                    {{ post.date }}
+                </td>
+            </tr>
         </tbody>
     </table>
 </template>
