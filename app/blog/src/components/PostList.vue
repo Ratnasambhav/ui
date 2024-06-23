@@ -20,7 +20,7 @@ const shouldRenderYear = (year: number, index: number): boolean => postList.find
 <template>
     <table>
         <tbody>
-            <tr v-for="(post, index) in postList" class="border-t border-gray-4" :key="`${post.date}/${post.year}`">
+            <tr v-for="(post, index) in postList" class="border-t border-primary-12" :key="`${post.date}/${post.year}`">
                 <td v-if="shouldRenderYear(post.year, index)" :rowspan="numPostInYear(post.year)"
                     class="py-2 pr-10 text-gray-10 align-baseline">
                     {{ post.year }}

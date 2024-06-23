@@ -1,159 +1,45 @@
 :root {
-    --background: #fff;
+    /* #FF4F00 - International orange */
+    --hue: 37.42;
+    --color-bg: #fff;
 
-    --gray-1: #00005503;
-    --gray-2: #00005506;
-    --gray-3: #00104010;
-    --gray-4: #000b3618;
-    --gray-5: #0009321f;
-    --gray-6: #00073527;
-    --gray-7: #00063332;
-    --gray-8: #00083046;
-    --gray-9: #00051d74;
-    --gray-10: #00051b7f;
-    --gray-11: #0002119d;
-    --gray-12: #000107e1;
+    --primary-1: oklch(99.2% 0.003 var(--hue));
+    --primary-2: oklch(97.9% 0.016 var(--hue));
+    --primary-3: oklch(95.7% 0.039 var(--hue));
+    --primary-4: oklch(92.1% 0.087 var(--hue));
+    --primary-5: oklch(89.1% 0.115 var(--hue));
+    --primary-6: oklch(85.7% 0.121 var(--hue));
+    --primary-7: oklch(80.5% 0.125 var(--hue));
+    --primary-8: oklch(74.5% 0.149 var(--hue));
+    --primary-9: oklch(67% 0.222 var(--hue));
+    --primary-10: oklch(63.1% 0.222 var(--hue));
+    --primary-11: oklch(58.9% 0.214 var(--hue));
+    --primary-12: oklch(35% 0.08 var(--hue));
 
-    --gray-contrast: #FFFFFF;
-    --gray-surface: #ffffffcc;
-    --gray-indicator: #8b8d98;
-    --gray-track: #8b8d98;
-
-    --accent-1: #c0400004;
-    --accent-2: #ff49000e;
-    --accent-3: #ff47001d;
-    --accent-4: #ff440035;
-    --accent-5: #ff430049;
-    --accent-6: #ff44005f;
-    --accent-7: #ff3f017b;
-    --accent-8: #f939009a;
-    --accent-9: #ff4f00;
-    --accent-10: #ec4700;
-    --accent-11: #d34500;
-    --accent-12: #4b1100e5;
-
-    --accent-contrast: #fff;
-    --accent-surface: #fff3eecc;
-    --accent-indicator: #ff4f00;
-    --accent-track: #ff4f00;
-
-    @supports (color: color(display-p3 1 1 1)) {
-        @media (color-gamut: p3) {
-            --gray-1: color(display-p3 0.024 0.024 0.349 / 0.012);
-            --gray-2: color(display-p3 0.024 0.024 0.349 / 0.024);
-            --gray-3: color(display-p3 0.008 0.067 0.255 / 0.063);
-            --gray-4: color(display-p3 0.012 0.051 0.216 / 0.095);
-            --gray-5: color(display-p3 0.004 0.039 0.2 / 0.122);
-            --gray-6: color(display-p3 0.004 0.027 0.18 / 0.153);
-            --gray-7: color(display-p3 0.008 0.027 0.184 / 0.197);
-            --gray-8: color(display-p3 0.004 0.031 0.176 / 0.275);
-            --gray-9: color(display-p3 0.004 0.02 0.106 / 0.455);
-            --gray-10: color(display-p3 0.004 0.02 0.098 / 0.499);
-            --gray-11: color(display-p3 0 0.008 0.059 / 0.616);
-            --gray-12: color(display-p3 0 0.004 0.027 / 0.883);
-
-            --gray-contrast: #FFFFFF;
-            --gray-surface: color(display-p3 1 1 1 / 80%);
-            --gray-indicator: oklch(64.6% 0.016 277.7);
-            --gray-track: oklch(64.6% 0.016 277.7);
-
-            --accent-1: color(display-p3 0.757 0.267 0.024 / 0.016);
-            --accent-2: color(display-p3 0.847 0.231 0.004 / 0.051);
-            --accent-3: color(display-p3 0.859 0.29 0.004 / 0.11);
-            --accent-4: color(display-p3 0.882 0.255 0 / 0.2);
-            --accent-5: color(display-p3 0.886 0.259 0.004 / 0.275);
-            --accent-6: color(display-p3 0.882 0.267 0.004 / 0.357);
-            --accent-7: color(display-p3 0.89 0.243 0.004 / 0.459);
-            --accent-8: color(display-p3 0.871 0.22 0 / 0.573);
-            --accent-9: color(display-p3 0.91 0.239 0 / 0.836);
-            --accent-10: color(display-p3 0.831 0.216 0 / 0.855);
-            --accent-11: color(display-p3 0.729 0.208 0 / 0.871);
-            --accent-12: color(display-p3 0.247 0.063 0 / 0.883);
-
-            --accent-contrast: #fff;
-            --accent-surface: color(display-p3 1 0.953 0.933 / 0.8);
-            --accent-indicator: oklch(67% 0.222 37.42);
-            --accent-track: oklch(67% 0.222 37.42);
-        }
-    }
+    --primary-contrast: #fff;
+    --primary-surface: color(display-p3 1 0.953 0.933 / 0.8);
+    --primary-indicator: oklch(67% 0.222 var(--hue));
+    --primary-track: oklch(67% 0.222 var(--hue));
 
     @media (prefers-color-scheme: dark) {
-        --background: #111;
+        --color-bg: #111111;
 
-        --gray-1: #1111bb03;
-        --gray-2: #cbcbf90b;
-        --gray-3: #d6e2f916;
-        --gray-4: #d1d9f920;
-        --gray-5: #d7ddfd28;
-        --gray-6: #d9defc33;
-        --gray-7: #dae2fd43;
-        --gray-8: #e0e3fd60;
-        --gray-9: #e0e4fd70;
-        --gray-10: #e3e7fd7e;
-        --gray-11: #eff0feb9;
-        --gray-12: #fdfdffef;
+        --primary-1: oklch(17.8% 0.013 var(--hue));
+        --primary-2: oklch(20.7% 0.02 var(--hue));
+        --primary-3: oklch(25.5% 0.056 var(--hue));
+        --primary-4: oklch(29.2% 0.093 var(--hue));
+        --primary-5: oklch(33.3% 0.103 var(--hue));
+        --primary-6: oklch(38.3% 0.106 var(--hue));
+        --primary-7: oklch(45% 0.115 var(--hue));
+        --primary-8: oklch(53.9% 0.142 var(--hue));
+        --primary-9: oklch(67% 0.222 var(--hue));
+        --primary-10: oklch(63.1% 0.222 var(--hue));
+        --primary-11: oklch(79.1% 0.188 var(--hue));
+        --primary-12: oklch(91.1% 0.055 var(--hue));
 
-        --gray-contrast: #FFFFFF;
-        --gray-surface: rgba(0, 0, 0, 0.05);
-        --gray-indicator: #6c6e79;
-        --gray-track: #6c6e79;
-
-        --accent1: #e6000006;
-        --accent2: #f23e1111;
-        --accent3: #ff3b002b;
-        --accent4: #fe200044;
-        --accent5: #ff320055;
-        --accent6: #ff4d1666;
-        --accent7: #ff613181;
-        --accent8: #fe6537ac;
-        --accent9: #ff4f00;
-        --accent10: #ff4c00eb;
-        --accent11: #ff956f;
-        --accent12: #ffd6c8;
-
-        --accent-contrast: #fff;
-        --accent-surface: #2f171180;
-        --accent-indicator: #ff4f00;
-        --accent-track: #ff4f00;
-
-        @supports (color: color(display-p3 1 1 1)) {
-            @media (color-gamut: p3) {
-                --gray-1: color(display-p3 0.067 0.067 0.941 / 0.009);
-                --gray-2: color(display-p3 0.8 0.8 0.98 / 0.043);
-                --gray-3: color(display-p3 0.851 0.898 0.988 / 0.085);
-                --gray-4: color(display-p3 0.839 0.871 1 / 0.122);
-                --gray-5: color(display-p3 0.847 0.875 1 / 0.156);
-                --gray-6: color(display-p3 0.878 0.898 1 / 0.194);
-                --gray-7: color(display-p3 0.875 0.906 0.996 / 0.257);
-                --gray-8: color(display-p3 0.894 0.906 1 / 0.37);
-                --gray-9: color(display-p3 0.89 0.91 1 / 0.433);
-                --gray-10: color(display-p3 0.902 0.918 1 / 0.488);
-                --gray-11: color(display-p3 0.945 0.949 1 / 0.719);
-                --gray-12: color(display-p3 0.992 0.992 1 / 0.937);
-
-                --gray-contrast: #FFFFFF;
-                --gray-surface: color(display-p3 0 0 0 / 5%);
-                --gray-indicator: oklch(54% 0.017 277.7);
-                --gray-track: oklch(54% 0.017 277.7);
-
-                --accent-1: color(display-p3 0.992 0 0 / 0.017);
-                --accent-2: color(display-p3 0.996 0.282 0.141 / 0.055);
-                --accent-3: color(display-p3 0.996 0.302 0.043 / 0.152);
-                --accent-4: color(display-p3 1 0.2 0 / 0.236);
-                --accent-5: color(display-p3 1 0.278 0.027 / 0.299);
-                --accent-6: color(display-p3 1 0.376 0.165 / 0.366);
-                --accent-7: color(display-p3 1 0.451 0.263 / 0.463);
-                --accent-8: color(display-p3 1 0.467 0.29 / 0.622);
-                --accent-9: color(display-p3 1 0.392 0.176 / 0.921);
-                --accent-10: color(display-p3 1 0.376 0.157 / 0.845);
-                --accent-11: color(display-p3 1 0.635 0.49 / 0.942);
-                --accent-12: color(display-p3 1 0.871 0.816 / 0.971);
-
-                --accent-contrast: #fff;
-                --accent-surface: color(display-p3 0.165 0.094 0.071 / 0.5);
-                --accent-indicator: oklch(67% 0.222 37.42);
-                --accent-track: oklch(67% 0.222 37.42);
-            }
-        }
+        --primary-contrast: #fff;
+        --primary-surface: color(display-p3 0.165 0.094 0.071 / 0.5);
+        --primary-indicator: oklch(67% 0.222 var(--hue));
+        --primary-track: oklch(67% 0.222 var(--hue));
     }
 }

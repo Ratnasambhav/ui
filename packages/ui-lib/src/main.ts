@@ -1,8 +1,10 @@
 import "./style.css";
 
-import Blur from "./components/Blur/Blur.vue";
-import Button from "./components/Button/Button.vue";
-import Link from "./components/Link/Link.vue";
+import Blur from "./components/Blur.vue";
+import Button from "./components/Button.vue";
+import Link from "./components/Link.vue";
+
+import TooltipDirective from "./directives/tooltip";
 
 import ExternalLinkIcon from './icons/ExternalLinkIcon.vue';
 import HeadphoneIcon from './icons/HeadphoneIcon.vue';
@@ -14,6 +16,9 @@ export {
   Blur,
   Button,
   Link,
+
+  // Directives
+  TooltipDirective,
 
   // Icons
   ExternalLinkIcon,

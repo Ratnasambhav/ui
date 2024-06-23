@@ -8,6 +8,18 @@
 
 @layer base {
     body {
-        @apply bg-background bg-gradient-to-b from-accent-4 to-transparent font-sans text-gray-12;
+        @apply font-sans text-text-main antialiased;
+        @apply bg-background bg-gradient-to-b from-transparent to-primary-7;
+        text-rendering: optimizelegibility;
+    }
+}
+
+@layer typography {
+    h1 {
+        @apply !text-3xl font-serif;
+    }
+
+    h2 {
+        @apply !text-2xl font-serif;
     }
 }

@@ -1,0 +1,16 @@
+[
+  {
+    "label": "dev",
+    "command": "pnpm run dev",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "install",
+    "command": "pnpm install",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  }
+]
