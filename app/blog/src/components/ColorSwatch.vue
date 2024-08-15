@@ -1,10 +1,17 @@
 <script setup lang='ts'>
+import { Tooltip } from "@ui/ui-lib";
+
 const { color } = defineProps<{ color: string }>();
 const colorValue = getComputedStyle(document.body).getPropertyValue(`--${color}`);
 </script>
 
 <template>
-    <div v-tooltip="`${colorValue}, ${color}`" :style="{ 'background-color': `var(--${color})` }"
-        :title="`${colorValue}, ${color}`" class="h-12 w-12">
-    </div>
+    <Tooltip>
+        <template #trigger>
+            <div class="h-12 w-12" :style="{ 'background-color': `var(--${color})` }"></div>
+        </template>
+        <template #content>
+            <span><strong>{{color}}:</strong> {{colorValue}}</span>
+        </template>
+    </Tooltip>
 </template>
