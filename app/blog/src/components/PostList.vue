@@ -28,10 +28,15 @@ const shouldRenderYear = (year: number, index: number): boolean => postList.find
                 <td class="py-2">
                     <RouterLink :to="post.link">
                         <Link>
-                        <template #leftContent>
-                            <RightArrowIcon />
-                        </template>
-                        {{ post.title }}
+                            <template #leftContent>
+                                <RightArrowIcon />
+                            </template>
+                            {{ post.title }}
+                            <template #rightContent>
+                                <div class="pl-2 flex gap-1">
+                                    <span v-for="(tag) in post.tags" class="px-1 rounded bg-primary-3 text-gray-10">#{{tag}}</span>
+                                </div>
+                            </template>
                         </Link>
                     </RouterLink>
                 </td>

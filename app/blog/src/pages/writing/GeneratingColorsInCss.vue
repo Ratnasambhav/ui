@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import ColorSwatch from '../../components/ColorSwatch.vue';
 
-const handelHueChange = (event: Event) => {
-    document.documentElement.style.setProperty('--hue', event.target?.value || 37.42)
-}
+const handelHueChange = (event: Event) => document.documentElement.style.setProperty('--hue', event.target?.value || 37.42)
 
-const colors = [
+const COLORS = [
     'primary-1',
     'primary-2',
     'primary-3',
@@ -26,9 +24,8 @@ const colors = [
         <h1 class="mt-10">Generating colors in CSS</h1>
         <section>
             <div class="grid grid-cols-[repeat(12,_48px)]">
-                <ColorSwatch v-for="color in colors" :color="color" />
+                <ColorSwatch v-for="color in COLORS" :color="color" />
             </div>
-
             <input type="range" min="0" max="360" v-on:change="handelHueChange" />
         </section>
     </article>

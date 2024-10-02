@@ -3,4 +3,5 @@ export type PostListItem = {
   date: string,
   link: string,
   title: string,
+  tags: Array<string>,
 }
