@@ -32,7 +32,7 @@ input {
     --track-height: 8px;
     --border-radius: 4px;
     --thumb-bg: var(--primary-11);
-    --track-bg: var(--primary-2);
+    --track-bg: var(--primary-7);
 
     width: 100%;
     cursor: pointer;
@@ -42,7 +42,6 @@ input {
 }
 
 input:active, input:hover {
-    --track-bg: var(--primary-1);
     --thumb-bg: var(--primary-12);
 }
 
