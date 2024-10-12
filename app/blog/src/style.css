@@ -9,7 +9,7 @@
 @layer base {
     body {
         @apply font-sans text-text-main antialiased;
-        @apply bg-background bg-gradient-to-b from-transparent to-primary-7;
+        @apply bg-background bg-gradient-to-b from-transparent to-primary-7 bg-fixed;
         text-rendering: optimizelegibility;
     }
 }

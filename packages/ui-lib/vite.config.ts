@@ -24,6 +24,7 @@ export default defineConfig({
     watch: {
       include: "/src/**",
     },
+    target: 'esnext',
   },
   plugins: [vue(), dts()],
 });

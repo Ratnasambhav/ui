@@ -22,7 +22,7 @@ const shouldRenderYear = (year: number, index: number): boolean => postList.find
         <tbody>
             <tr v-for="(post, index) in postList" class="border-t border-primary-12" :key="`${post.date}/${post.year}`">
                 <td v-if="shouldRenderYear(post.year, index)" :rowspan="numPostInYear(post.year)"
-                    class="py-2 pr-10 text-gray-10 align-baseline">
+                    class="py-2 pr-10 align-baseline">
                     {{ post.year }}
                 </td>
                 <td class="py-2">
@@ -32,15 +32,15 @@ const shouldRenderYear = (year: number, index: number): boolean => postList.find
                                 <RightArrowIcon />
                             </template>
                             {{ post.title }}
-                            <template #rightContent>
-                                <div class="pl-2 flex gap-1">
-                                    <span v-for="(tag) in post.tags" class="px-1 rounded bg-primary-3 text-gray-10">#{{tag}}</span>
-                                </div>
-                            </template>
                         </Link>
                     </RouterLink>
                 </td>
-                <td class="py-2 pl-10 text-gray-10">
+                <td class="py-2 pl-4 flex gap-1">
+                    <span v-for="(tag) in post.tags" class="px-1 rounded bg-primary-3 shadow-sm hover:shadow-md hover:text-text-sub transition-[box-shadow,color]">
+                        #{{tag}}
+                    </span>
+                </td>
+                <td class="py-2 pl-10">
                     {{ post.date }}
                 </td>
             </tr>

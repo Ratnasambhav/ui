@@ -6,6 +6,6 @@ export const postList: Array<PostListItem> = [
     date: '15/06',
     title: 'Generating colors in CSS',
     link: '/writing/generating-colors-in-css',
-    tags: ['css', 'oklch']
+    tags: ['css', 'oklch', 'colors']
   }
 ]

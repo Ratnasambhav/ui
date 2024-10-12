@@ -91,7 +91,7 @@ onUnmounted(() => {
   <div
     ref="content"
     v-if="isHovering"
-    class="absolute w-max px-2 py-1 bg-surface-3 text-text-main rounded-md shadow-md"
+    class="absolute w-max px-2 py-1 bg-transparent backdrop-blur text-text-main rounded-md shadow"
   >
     <slot name="content"></slot>
   </div>
